@@ -11,6 +11,6 @@ test('Deve comprar um ingresso', async function () {
         input
     );
     const output = response.data;
-
-    expect(output.status).toBe('paid');
+    expect(output.ticketId).toBeDefined();
+    expect(output.status).toBe('reserved');
 });
